@@ -21,13 +21,13 @@
         <div class="web-app left">
             <!-- Header -->
             <header class="flex justify-between">
-                <div class="profile flex align-center">
+                <div id="profile" class="flex align-center">
                     <div class="img">
-                        <img src="img/avatar_io.jpg" alt="Foto profilo">
+                        <img src="img/avatar_io.jpg" alt="Foto profilo" class="rounded">
                     </div>
                     <div class="name">Sofia</div>
                 </div>
-                <div class="options flex align-center">
+                <div id="options" class="flex align-center">
                     <div class="status">
                         <i class="fa-solid fa-circle-notch"></i>
                     </div>
@@ -44,8 +44,16 @@
             <!-- Main -->
             <main class="flex flex-column">
                 <!-- Desktop notifications -->
-                <div class="desktop-notifications">
-                    desktop notifications
+                <div id="desktop-notifications" class="flex align-center">
+                    <div class="img rounded flex align-center justify-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div id="activate-notifications">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
                 </div>
                 <!-- // Desktop notifications -->
     

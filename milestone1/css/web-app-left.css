@@ -14,17 +14,11 @@
     padding: .625rem;
 }
 
-.web-app.left .profile .img {
-    aspect-ratio: 1;
-    margin-right: .625rem;
-    width: 2.8125rem;
-}
-
-.web-app.left .options {
+.web-app.left #options {
     color: #b1b1b1;
 }
 
-.web-app.left .options > * {
+.web-app.left #options > * {
     cursor: pointer;
     margin: .625rem;
 }
@@ -39,9 +33,14 @@
     height: calc(100% - 3.75rem);
 }
 
-.desktop-notifications {
+.web-app.left #desktop-notifications {
     background-color: #8edafc;
-    height: 4.375rem;
+    padding: .8125rem;
+}
+
+.web-app.left #desktop-notifications .rounded {
+    background-color: #f2fbff;
+    color: #8edafc;
 }
 
 .contact-search {
