@@ -24,9 +24,19 @@ a {
     color: #5c8a9f;
 }
 
+button, input {
+    background-color: #ffffff;
+    border: .0625rem solid #f5f5f5;
+    color: #b4bcc4;
+}
+
 img {
     display: block;
     width: 100%;
+}
+
+input {
+    padding: .625rem;
 }
 
 /*
@@ -107,10 +117,10 @@ img {
 
 .options {
     color: #b1b1b1;
+    cursor: pointer;
 }
 
 .options > * {
-    cursor: pointer;
     margin: .625rem;
 }
 
