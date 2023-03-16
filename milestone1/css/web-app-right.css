@@ -1,0 +1,33 @@
+/*
+=============
+ Common
+=============
+*/
+
+.web-app.right > header,
+.web-app.right > footer {
+    background-color: #eaeaea;
+    border-left: .0625rem solid #dfdfdf;
+    height: 3.75rem;
+    padding: .625rem;
+}
+
+/*
+=============
+ Header
+=============
+*/
+
+.web-app.right header .last-login {
+    color: #818983;
+}
+
+/*
+=============
+ Main
+=============
+*/
+
+.web-app.right > main {
+    background-color: #e5ddd5;
+}

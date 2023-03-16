@@ -77,6 +77,15 @@ img {
     justify-content: center;
 }
 
+.options {
+    color: #b1b1b1;
+}
+
+.options > * {
+    cursor: pointer;
+    margin: .625rem;
+}
+
 .rounded {
     border-radius: 50%;
 }
