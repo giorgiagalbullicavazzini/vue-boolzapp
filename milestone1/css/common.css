@@ -35,6 +35,10 @@ img {
 =============
 */
 
+.active {
+    background-color: #e9ebeb;
+}
+
 .align-center {
     align-items: center;
 }
@@ -53,8 +57,16 @@ img {
 
 .img {
     aspect-ratio: 1;
+}
+
+.img.small {
     margin-right: .625rem;
     width: 2.8125rem;
+}
+
+.img.big {
+    margin-right: .9375rem;
+    width: 3.4375rem;
 }
 
 .justify-between {

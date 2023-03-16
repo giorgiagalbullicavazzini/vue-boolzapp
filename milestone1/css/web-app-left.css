@@ -35,7 +35,7 @@
 
 .web-app.left #desktop-notifications {
     background-color: #8edafc;
-    padding: .8125rem;
+    padding: .9375rem;
 }
 
 .web-app.left #desktop-notifications .rounded {
@@ -62,6 +62,20 @@
     color: #b4bcc4;
 }
 
-.contacts {
+.web-app.left #contacts {
     background-color: #ffffff;
+    overflow-y: scroll;
+}
+
+.web-app.left #contacts .contact {
+    border-bottom: 1px solid #f8f8f8;
+    padding: .625rem .9375rem;
+}
+
+.web-app.left #contacts .contact:last-of-type {
+    border: none;
+}
+
+.web-app.left #contacts .last-message {
+    color: #bfc1cd;
 }
