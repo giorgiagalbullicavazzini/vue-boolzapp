@@ -1,0 +1,58 @@
+/*
+=============
+ Web app containers
+=============
+*/
+
+.web-app.left {
+    width: 35%;
+}
+
+.web-app.right {
+    background-color: #ff8a16;
+}
+
+/*
+=============
+ Web app left
+=============
+*/
+
+.web-app.left > header {
+    background-color: #eaeaea;
+    height: 3.75rem;
+}
+
+.web-app.left > main {
+    height: calc(100% - 3.75rem);
+}
+
+.desktop-notifications {
+    background-color: #8edafc;
+    height: 4.375rem;
+}
+
+.contact-search {
+    background-color: #fafafa;
+    height: 2.8125rem
+}
+
+.contacts {
+    background-color: #ffffff;
+}
+
+/*
+=============
+ Web app right
+=============
+*/
+
+.web-app.right > header,
+.web-app.right > footer {
+    background-color: #eaeaea;
+    height: 3.75rem;
+}
+
+.web-app.right > main {
+    background-color: #e5ddd5;
+}

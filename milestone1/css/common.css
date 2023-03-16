@@ -1,0 +1,32 @@
+/*
+=============
+ Containers
+=============
+*/
+
+body {
+    background-color: #009688;
+    padding: 1.25rem 10rem;
+}
+
+.container {
+    height: calc(100vh - 2.5rem);
+}
+
+/*
+=============
+ Classes
+=============
+*/
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
