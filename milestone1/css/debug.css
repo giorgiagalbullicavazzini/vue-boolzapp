@@ -1,19 +1,5 @@
 /*
 =============
- Web app containers
-=============
-*/
-
-.web-app.left {
-    width: 35%;
-}
-
-.web-app.right {
-    background-color: #ff8a16;
-}
-
-/*
-=============
  Web app left
 =============
 */
@@ -21,6 +7,12 @@
 .web-app.left > header {
     background-color: #eaeaea;
     height: 3.75rem;
+}
+
+.web-app.left .profile .img {
+    background-color: red;
+    height: 50px;
+    width: 50px;
 }
 
 .web-app.left > main {

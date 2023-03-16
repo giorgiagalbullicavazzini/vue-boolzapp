@@ -14,11 +14,19 @@ body {
     height: calc(100vh - 2.5rem);
 }
 
+.web-app.left {
+    width: 35%;
+}
+
 /*
 =============
  Classes
 =============
 */
+
+.align-center {
+    align-items: center;
+}
 
 .flex {
     display: flex;
@@ -30,4 +38,8 @@ body {
 
 .flex-grow {
     flex-grow: 1;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
