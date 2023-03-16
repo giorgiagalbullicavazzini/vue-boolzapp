@@ -28,6 +28,8 @@
 =============
 */
 
-.web-app.right > main {
-    background-color: #e5ddd5;
+.web-app.right main {
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    padding: 2.8125rem 5.3125rem;
 }
