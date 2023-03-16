@@ -1,0 +1,54 @@
+.web-app.left {
+    width: 35%;
+}
+
+/*
+=============
+ Header
+=============
+*/
+
+.web-app.left > header {
+    background-color: #eaeaea;
+    height: 3.75rem;
+    padding: .625rem;
+}
+
+.web-app.left .profile .img {
+    aspect-ratio: 1;
+    margin-right: .625rem;
+    width: 2.8125rem;
+}
+
+.web-app.left .options {
+    color: #b1b1b1;
+}
+
+.web-app.left .options > * {
+    cursor: pointer;
+    margin: .625rem;
+}
+
+/*
+=============
+ Main
+=============
+*/
+
+.web-app.left > main {
+    height: calc(100% - 3.75rem);
+}
+
+.desktop-notifications {
+    background-color: #8edafc;
+    height: 4.375rem;
+}
+
+.contact-search {
+    background-color: #fafafa;
+    height: 2.8125rem
+}
+
+.contacts {
+    background-color: #ffffff;
+}
