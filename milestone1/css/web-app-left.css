@@ -43,9 +43,23 @@
     color: #8edafc;
 }
 
-.contact-search {
+.web-app.left #contact-search {
     background-color: #fafafa;
-    height: 2.8125rem
+    padding: .4375rem;
+}
+
+.web-app.left #contact-search form button {
+    padding: .625rem 1.5625rem;
+}
+
+.web-app.left #contact-search form input {
+    padding: .625rem;
+}
+
+.web-app.left #contact-search form > * {
+    background-color: #ffffff;
+    border: .0625rem solid #f5f5f5;
+    color: #b4bcc4;
 }
 
 .contacts {
