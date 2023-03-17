@@ -5,8 +5,8 @@
 */
 
 body {
-    background: rgb(0,150,136);
-    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(220,219,209,1) 15%);
+    background: var(--base-background-color);
+    background: linear-gradient(180deg, var(--first-background-gradient) 15%, var(--second-background-gradient) 15%);
     font-family: 'Roboto', sans-serif;
     padding: 1.25rem 10rem;
 }
@@ -22,13 +22,13 @@ body {
 */
 
 a {
-    color: #5c8a9f;
+    color: var(--links);
 }
 
 button, input {
-    background-color: #ffffff;
-    border: .0625rem solid #f5f5f5;
-    color: #b4bcc4;
+    background-color: var(--main-background-color);
+    border: .0625rem solid var(--button-border);
+    color: var(--button-color);
 }
 
 img {
@@ -48,7 +48,7 @@ input {
 */
 
 .active {
-    background-color: #e9ebeb;
+    background-color: var(--active-chat);
 }
 
 .align-center {
@@ -98,18 +98,18 @@ input {
 }
 
 .message {
-    background-color: white;
+    background-color: var(--main-background-color);
     border-radius: .625rem;
     margin-bottom: .625rem;
     min-width: 16.25rem;
 }
 
 .message.sent {
-    background-color: #d5f9ba;
+    background-color: var(--sent-message);
 }
 
 .message .hour {
-    color: #bcc7da;
+    color: var(--message-hour);
     padding: .3125rem;
 }
 
@@ -118,7 +118,7 @@ input {
 }
 
 .options {
-    color: #b1b1b1;
+    color: var(--options);
     cursor: pointer;
 }
 

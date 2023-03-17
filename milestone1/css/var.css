@@ -1,0 +1,32 @@
+/*
+=============
+ Colors
+=============
+*/
+
+:root {
+    /* Background */
+    --base-background-color: rgb(0,150,136);
+    --first-background-gradient: rgba(0,150,136,1);
+    --second-background-gradient: rgba(220,219,209,1);
+
+    /* Elements */
+    --active-chat: #e9ebeb;
+    --button-border: #f5f5f5;
+    --button-color: #b4bcc4;
+    --contact-border: #f8f8f8;
+    --contact-search-background: #fafafa;
+    --footer-background: #f3eeea;
+    --header-background: #eaeaea;
+    --last-login: #818983;
+    --main-background-color: #ffffff;
+    --main-border: #dfdfdf;
+    --notifications: #8edafc;
+    --notifications-background: #f2fbff;
+    --last-message: #bfc1cd;
+    --links: #5c8a9f;
+    --message-hour: #bcc7da;
+    --options: #b1b1b1;
+    --options-footer: #6b7376;
+    --sent-message: #d5f9ba;
+}

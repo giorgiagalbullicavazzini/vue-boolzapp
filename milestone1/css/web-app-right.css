@@ -6,7 +6,7 @@
 
 .web-app.right > header,
 .web-app.right > footer {
-    border-left: .125rem solid #dfdfdf;
+    border-left: .125rem solid var(--main-border);
     height: 3.75rem;
 }
 
@@ -17,12 +17,12 @@
 */
 
 .web-app.right header {
-    background-color: #eaeaea;
+    background-color: var(--header-background);
     padding: .625rem;
 }
 
 .web-app.right header .last-login {
-    color: #818983;
+    color: var(--last-login);
 }
 
 /*
@@ -44,8 +44,8 @@
 */
 
 .web-app.right footer {
-    background-color: #f3eeea;
-    padding: 10px 0;
+    background-color: var(--footer-background);
+    padding: .625rem 0;
 }
 
 .web-app.right footer #enter-message input {
@@ -54,7 +54,7 @@
 
 .web-app.right footer #emoticons,
 .web-app.right footer #vocal-message {
-    color: #6b7376;
+    color: var(--options-footer);
     cursor: pointer;
     margin: 1.875rem;
 }
