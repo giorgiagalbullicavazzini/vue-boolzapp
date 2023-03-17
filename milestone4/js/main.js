@@ -7,6 +7,7 @@ const app = createApp({
     data() {
         return {
             // Global variables 
+            search: '',
             selectedContact: 0,
             newMessage: '',
             replyTimer: 1,
@@ -215,6 +216,17 @@ const app = createApp({
                 }, this.replyTimer * 1000);
             }
             this.newMessage = '';
+        },
+        // Contact search
+        contactSearch() {
+            const filteredContacts = this.contacts.filter((contact) => {
+                if(contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    return true;
+                }
+            })
+            // console.log(filteredContacts);
+
+            return filteredContacts;
         }
     }
 }).mount('#app');
