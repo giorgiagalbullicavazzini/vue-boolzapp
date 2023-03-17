@@ -7,6 +7,7 @@ const app = createApp({
     data() {
         return {
             // Contacts array
+            selectedContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -178,6 +179,10 @@ const app = createApp({
         dateTransform(index) {
             const dt = luxon.DateTime.fromFormat(this.contacts[0].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
             return dt;
+        },
+        // Change the active contact
+        activeContact(index) {
+            this.selectedContact = index;
         }
     }
 }).mount('#app');

@@ -76,7 +76,7 @@
                 <!-- Contacts -->
                 <div id="contacts" class="flex-grow overflow-y">
                     <ul>
-                        <li v-for="(contact, index) in contacts">
+                        <li v-for="(contact, index) in contacts" @click="activeContact(index)">
                             <div class="contact flex justify-between">
                                 <div class="img big">
                                     <img :src="contacts[index].avatar" :alt="`Foto profilo di ${contacts[index].name}`" class="rounded">
@@ -102,10 +102,10 @@
             <header class="flex justify-between">
                 <div id="selected-contact" class="flex align-center">
                     <div class="img small">
-                        <img src="img/avatar_1.jpg" alt="Foto profilo di Michele" class="rounded">
+                        <img :src="contacts[selectedContact].avatar" :alt="`Foto profilo di ${contacts[selectedContact].name}`" class="rounded">
                     </div>
                     <div class="info">
-                        <div class="name">Michele</div>
+                        <div class="name">{{ contacts[selectedContact].name }}</div>
                         <div class="last-login">Ultimo accesso oggi alle 12:00</div>
                     </div>
                 </div>
