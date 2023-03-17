@@ -9,6 +9,7 @@ const app = createApp({
             // Contacts array
             selectedContact: 0,
             newMessage: '',
+            replyTimer: 1,
             contacts: [
                 {
                     name: 'Michele',
@@ -210,7 +211,7 @@ const app = createApp({
                 this.contacts[index].messages.push(sentMessage);
                 setTimeout(() => {
                     this.contactReply(index);
-                }, 1000);
+                }, this.replyTimer * 1000);
             }
             this.newMessage = '';
         }
