@@ -47,9 +47,15 @@ input {
 =============
 */
 
-.active {
+.web-app.left #contacts li:first-child {
     background-color: var(--active-chat);
 }
+
+/* Da rimuovere sopra e attivare sotto */
+
+/* .active {
+    background-color: var(--active-chat);
+} */
 
 .align-center {
     align-items: center;
