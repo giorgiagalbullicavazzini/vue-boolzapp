@@ -1,0 +1,59 @@
+.web-app.left {
+    width: 35%;
+}
+
+/*
+=============
+ Main
+=============
+*/
+
+.web-app.left > main {
+    height: calc(100% - var(--header-footer-height));
+}
+
+.web-app.left #desktop-notifications {
+    background-color: var(--notifications);
+    padding: .9375rem;
+}
+
+.web-app.left #desktop-notifications .rounded {
+    background-color: var(--notifications-background);
+    color: var(--notifications);
+}
+
+.web-app.left #contact-search {
+    background-color: var(--contact-search-background);
+    padding: .4375rem;
+}
+
+.web-app.left #contact-search form label i {
+    font-size: inherit;
+    padding: .625rem 1.5625rem;
+}
+
+.web-app.left #contacts {
+    background-color: var(--main-background-color);
+}
+
+.web-app.left #contacts li {
+    border-bottom: 1px solid var(--contact-border);
+    padding: .625rem .9375rem;
+}
+
+.web-app.left #contacts li:last-of-type {
+    border: none;
+}
+
+.web-app.left #contacts li .name {
+    font-size: var(--big-font);
+}
+
+.web-app.left #contacts .last-message {
+    color: var(--last-message);
+    font-size: var(--small-font);
+}
+
+.web-app.left #contacts .last-message.hour {
+    font-size: var(--smaller-font);
+}
