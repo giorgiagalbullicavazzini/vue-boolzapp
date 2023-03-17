@@ -47,7 +47,9 @@
 }
 
 .web-app.right footer #enter-message input {
-    font-size: inherit;
+    border-radius: .3125rem;
+    font-size: var(--small-font);
+    padding: .9375rem;
     width: 100%;
 }
 
