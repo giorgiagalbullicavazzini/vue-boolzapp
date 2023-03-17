@@ -127,7 +127,7 @@
             <main class="flex flex-column flex-grow overflow-y">
                 <div v-for="contact_message in contacts[0].messages" class="message sent flex justify-between align-self-end">
                     <div class="text">{{ contact_message.message }}</div>
-                    <div class="hour align-self-end">{{ contact_message.date }}</div>
+                    <div class="hour align-self-end">{{ contact_message.date }} </div>
                 </div>
 
 
@@ -159,6 +159,9 @@
         <!-- // Web App Right -->
     </div>
     <!-- // Web app container -->
+
+    <!-- Luxon Library -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

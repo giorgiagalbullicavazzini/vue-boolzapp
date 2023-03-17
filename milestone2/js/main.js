@@ -172,5 +172,18 @@ const app = createApp({
             ]
             
         }
+    },
+    methods: {
+        // Message date transform into human language
+        dateTransform() {
+            console.log(this.contacts[0].messages[0].date);
+            const dt = luxon.DateTime.fromFormat(this.contacts[0].messages[0].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
+            
+            this.contacts[0].messages[0].date = dt;
+            console.log(this.contacts[0].messages[0].date);
+        }
+    },
+    mounted() {
+        this.dateTransform();
     }
 }).mount('#app');
