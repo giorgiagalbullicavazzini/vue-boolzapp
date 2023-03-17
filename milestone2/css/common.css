@@ -1,0 +1,161 @@
+/*
+=============
+ Containers
+=============
+*/
+
+body {
+    background: var(--base-background-color);
+    background: linear-gradient(180deg, var(--first-background-gradient) 15%, var(--second-background-gradient) 15%);
+    font-family: 'Lato', sans-serif;
+    padding: 1.25rem 10rem;
+}
+
+.container {
+    height: calc(100vh - 2.5rem);
+}
+
+header {
+    background-color: var(--header-background);
+    padding: .625rem;
+}
+
+header, footer {
+    height: var(--header-footer-height);
+}
+
+/*
+=============
+ Elements
+=============
+*/
+
+a {
+    color: var(--links);
+    font-size: var(--small-font);
+}
+
+i {
+    font-size: var(--bigger-font);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input {
+    padding: .625rem;
+}
+
+input, label {
+    background-color: var(--main-background-color);
+    border: .0625rem solid var(--button-border);
+    color: var(--button-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+=============
+ Classes
+=============
+*/
+
+.web-app.left #contacts li:first-child {
+    background-color: var(--active-chat);
+}
+
+/* Remove above, activate below */
+
+/* .active {
+    background-color: var(--active-chat);
+} */
+
+.align-center {
+    align-items: center;
+}
+
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.img {
+    aspect-ratio: 1;
+}
+
+.img.small {
+    margin-right: .625rem;
+    width: 2.8125rem;
+}
+
+.img.big {
+    margin-right: .9375rem;
+    width: 3.4375rem;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.message {
+    background-color: var(--main-background-color);
+    border-radius: .625rem;
+    margin-bottom: .625rem;
+    min-width: 16.25rem;
+}
+
+.message.sent {
+    background-color: var(--sent-message);
+}
+
+.message .hour {
+    color: var(--message-hour);
+    padding: .3125rem;
+}
+
+.message .text {
+    padding: .9375rem;
+}
+
+.options {
+    color: var(--options);
+}
+
+.options > * {
+    margin: .625rem;
+}
+
+.overflow-y {
+    overflow-y: scroll;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.rounded {
+    border-radius: 50%;
+}

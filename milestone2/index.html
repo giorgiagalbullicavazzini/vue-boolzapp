@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Web app container -->
+    <div id="app" class="container flex">
+        <!-- Web App Left -->
+        <div class="web-app left">
+            <!-- Header -->
+            <header class="flex justify-between">
+                <div id="profile" class="flex align-center">
+                    <div class="img small">
+                        <img src="img/avatar_io.jpg" alt="Foto profilo" class="rounded">
+                    </div>
+                    <div class="name">Sofia</div>
+                </div>
+                <div class="options flex align-center">
+                    <div class="status pointer">
+                        <i class="fa-solid fa-circle-notch"></i>
+                    </div>
+                    <div class="new-chat pointer">
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+                    <div class="menu pointer">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </header>
+            <!-- // Header -->
+
+            <!-- Main -->
+            <main class="flex flex-column">
+                <!-- Desktop notifications -->
+                <div id="desktop-notifications" class="flex align-center">
+                    <div class="img small rounded flex align-center justify-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div id="activate-notifications">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Desktop notifications -->
+    
+                <!-- Contact search -->
+                <div id="contact-search">
+                    <form action="#" class="flex">
+                        <label for="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <input type="search" name="search" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat">
+                    </form>
+                </div>
+                <!-- // Contact search -->
+    
+                <!-- Contacts -->
+                <div id="contacts" class="flex-grow overflow-y">
+                    <ul>
+                        <li v-for="(contact, index) in contacts">
+                            <div class="contact flex justify-between">
+                                <div class="img big">
+                                    <img :src="contacts[index].avatar" :alt="`Foto profilo di ${contacts[index].name}`" class="rounded">
+                                </div>
+                                <div class="info flex-grow">
+                                    <div class="name">{{ contacts[index].name }}</div>
+                                    <div class="last-message">Ultimo messaggio inviato</div>
+                                </div>
+                                <div class="last-message hour">12:00</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // Contacts -->
+            </main>
+            <!-- // Main -->
+        </div>
+        <!-- // Web App Left -->
+
+        <!-- Web App Right -->
+        <div class="web-app right flex flex-column flex-grow">
+            <!-- Header -->
+            <header class="flex justify-between">
+                <div id="selected-contact" class="flex align-center">
+                    <div class="img small">
+                        <img src="img/avatar_1.jpg" alt="Foto profilo di Michele" class="rounded">
+                    </div>
+                    <div class="info">
+                        <div class="name">Michele</div>
+                        <div class="last-login">Ultimo accesso oggi alle 12:00</div>
+                    </div>
+                </div>
+                <div class="options flex align-center">
+                    <div class="search-message pointer">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="file pointer">
+                        <i class="fa-solid fa-paperclip"></i>
+                    </div>
+                    <div class="menu pointer">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </header>
+            <!-- // Header -->
+
+            <!-- Main -->
+            <main class="flex flex-column flex-grow overflow-y">
+                <div class="message sent flex justify-between align-self-end">
+                    <div class="text">Hai portato a spasso il cane?</div>
+                    <div class="hour align-self-end">15:30</div>
+                </div>
+                <div class="message sent flex justify-between align-self-end">
+                    <div class="text">Ricordati di stendere i panni</div>
+                    <div class="hour align-self-end">15:50</div>
+                </div>
+                <div class="message received flex justify-between align-self-start">
+                    <div class="text">Tutto fatto!</div>
+                    <div class="hour align-self-end">16:15</div>
+                </div>
+            </main>
+            <!-- // Main -->
+
+            <!-- Footer -->
+            <footer class="flex justify-between align-center">
+                <div id="emoticons" class="pointer">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <div id="enter-message" class="flex-grow">
+                    <input type="text" name="new-message" id="new-message" placeholder="Scrivi un messaggio">
+                </div>
+                <div id="vocal-message" class="pointer">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </footer>
+            <!-- // Footer -->
+        </div>
+        <!-- // Web App Right -->
+    </div>
+    <!-- // Web app container -->
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
