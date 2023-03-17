@@ -33,13 +33,13 @@
                     <div class="name">Sofia</div>
                 </div>
                 <div class="options flex align-center">
-                    <div class="status">
+                    <div class="status pointer">
                         <i class="fa-solid fa-circle-notch"></i>
                     </div>
-                    <div class="new-chat">
+                    <div class="new-chat pointer">
                         <i class="fa-solid fa-message"></i>
                     </div>
-                    <div class="menu">
+                    <div class="menu pointer">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
@@ -65,16 +65,16 @@
                 <!-- Contact search -->
                 <div id="contact-search">
                     <form action="#" class="flex">
-                        <button>
+                        <label for="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input type="search" name="contact" id="contact" class="flex-grow" placeholder="Cerca o inizia una nuova chat">
+                        </label>
+                        <input type="search" name="search" id="search" class="flex-grow" placeholder="Cerca o inizia una nuova chat">
                     </form>
                 </div>
                 <!-- // Contact search -->
     
                 <!-- Contacts -->
-                <div id="contacts" class="flex-grow">
+                <div id="contacts" class="flex-grow overflow-y">
                     <ul>
                         <li v-for="(contact, index) in contacts">
                             <div class="contact flex justify-between">
@@ -85,7 +85,7 @@
                                     <div class="name">{{ contacts[index].name }}</div>
                                     <div class="last-message">Ultimo messaggio inviato</div>
                                 </div>
-                                <div class="last-message">12:00</div>
+                                <div class="last-message hour">12:00</div>
                             </div>
                         </li>
                     </ul>
@@ -110,13 +110,13 @@
                     </div>
                 </div>
                 <div class="options flex align-center">
-                    <div class="status">
+                    <div class="search-message pointer">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <div class="new-chat">
+                    <div class="file pointer">
                         <i class="fa-solid fa-paperclip"></i>
                     </div>
-                    <div class="menu">
+                    <div class="menu pointer">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
             <!-- // Header -->
 
             <!-- Main -->
-            <main class="flex flex-column flex-grow">
+            <main class="flex flex-column flex-grow overflow-y">
                 <div class="message sent flex justify-between align-self-end">
                     <div class="text">Hai portato a spasso il cane?</div>
                     <div class="hour align-self-end">15:30</div>
@@ -142,13 +142,13 @@
 
             <!-- Footer -->
             <footer class="flex justify-between align-center">
-                <div id="emoticons">
+                <div id="emoticons" class="pointer">
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
                 <div id="enter-message" class="flex-grow">
                     <input type="text" name="new-message" id="new-message" placeholder="Scrivi un messaggio">
                 </div>
-                <div id="vocal-message">
+                <div id="vocal-message" class="pointer">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </footer>

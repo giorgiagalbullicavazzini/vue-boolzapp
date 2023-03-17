@@ -30,3 +30,13 @@
     --options-footer: #6b7376;
     --sent-message: #d5f9ba;
 }
+
+/*
+=============
+ Sizes
+=============
+*/
+
+:root {
+    --header-footer-height: 3.75rem;
+}
