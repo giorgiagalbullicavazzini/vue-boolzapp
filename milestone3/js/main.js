@@ -8,6 +8,7 @@ const app = createApp({
         return {
             // Contacts array
             selectedContact: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -183,6 +184,20 @@ const app = createApp({
         dateTransform(index) {
             const dt = luxon.DateTime.fromFormat(this.contacts[this.selectedContact].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
             return dt;
+        },
+        // Send new message
+        sendMessage(index) {
+            if(this.newMessage.trim() !== '') {
+                const now = luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
+                const sentMessage = {
+                    date: now,
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                console.log(sentMessage);
+                this.contacts[index].messages.push(sentMessage);
+            }
+            this.newMessage = '';
         }
     }
 }).mount('#app');
