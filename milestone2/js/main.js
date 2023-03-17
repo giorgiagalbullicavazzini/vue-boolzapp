@@ -175,8 +175,8 @@ const app = createApp({
     },
     methods: {
         // Message date transform into human language
-        dateTransform() {
-            const dt = luxon.DateTime.fromFormat(this.contacts[0].messages[0].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
+        dateTransform(index) {
+            const dt = luxon.DateTime.fromFormat(this.contacts[0].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
             return dt;
         }
     }

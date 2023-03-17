@@ -125,20 +125,10 @@
 
             <!-- Main -->
             <main class="flex flex-column flex-grow overflow-y">
-                <div v-for="contact_message in contacts[0].messages" class="message sent flex justify-between align-self-end">
+                <div v-for="(contact_message, index) in contacts[0].messages" class="message sent flex justify-between align-self-end">
                     <div class="text">{{ contact_message.message }}</div>
-                    <div class="hour align-self-end">{{ dateTransform() }} </div>
+                    <div class="hour align-self-end">{{ dateTransform(index) }} </div>
                 </div>
-
-
-                <!-- <div class="message sent flex justify-between align-self-end">
-                    <div class="text">Ricordati di stendere i panni</div>
-                    <div class="hour align-self-end">15:50</div>
-                </div>
-                <div class="message received flex justify-between align-self-start">
-                    <div class="text">Tutto fatto!</div>
-                    <div class="hour align-self-end">16:15</div>
-                </div> -->
             </main>
             <!-- // Main -->
 
