@@ -21,7 +21,7 @@
 
 <body>
     <!-- Web app container -->
-    <div id="#app" class="container flex">
+    <div id="app" class="container flex">
         <!-- Web App Left -->
         <div class="web-app left">
             <!-- Header -->
@@ -75,38 +75,20 @@
     
                 <!-- Contacts -->
                 <div id="contacts" class="contacts flex-grow">
-                    <div class="contact flex justify-between active">
-                        <div class="img big">
-                            <img src="img/avatar_1.jpg" alt="Foto profilo di Michele" class="rounded">
-                        </div>
-                        <div class="info flex-grow">
-                            <div class="name">Michele</div>
-                            <div class="last-message">Ultimo messaggio inviato</div>
-                        </div>
-                        <div class="last-message">12:00</div>
-                    </div>
-
-                    <div class="contact flex justify-between">
-                        <div class="img big">
-                            <img src="img/avatar_1.jpg" alt="Foto profilo di Michele" class="rounded">
-                        </div>
-                        <div class="info flex-grow">
-                            <div class="name">Michele</div>
-                            <div class="last-message">Ultimo messaggio inviato</div>
-                        </div>
-                        <div class="last-message">12:00</div>
-                    </div>
-
-                    <div class="contact flex justify-between">
-                        <div class="img big">
-                            <img src="img/avatar_1.jpg" alt="Foto profilo di Michele" class="rounded">
-                        </div>
-                        <div class="info flex-grow">
-                            <div class="name">Michele</div>
-                            <div class="last-message">Ultimo messaggio inviato</div>
-                        </div>
-                        <div class="last-message">12:00</div>
-                    </div>
+                    <ul>
+                        <li v-for="(contact, index) in contacts">
+                            <div class="contact flex justify-between active">
+                                <div class="img big">
+                                    <img :src="contacts[index].avatar" :alt="`Foto profilo di ${contacts[index].name}`" class="rounded">
+                                </div>
+                                <div class="info flex-grow">
+                                    <div class="name">{{ contacts[index].name }}</div>
+                                    <div class="last-message">Ultimo messaggio inviato</div>
+                                </div>
+                                <div class="last-message">12:00</div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <!-- // Contacts -->
             </main>
