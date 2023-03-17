@@ -6,10 +6,11 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
-            // Contacts array
+            // Global variables 
             selectedContact: 0,
             newMessage: '',
             replyTimer: 1,
+            // Contacts array
             contacts: [
                 {
                     name: 'Michele',
