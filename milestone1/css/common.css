@@ -32,11 +32,11 @@ header, footer {
 
 a {
     color: var(--links);
-    font-size: .875rem;
+    font-size: var(--small-font);
 }
 
 i {
-    font-size: 1.375rem;
+    font-size: var(--bigger-font);
 }
 
 img {

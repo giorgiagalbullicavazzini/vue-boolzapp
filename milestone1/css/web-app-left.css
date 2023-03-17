@@ -46,14 +46,14 @@
 }
 
 .web-app.left #contacts li .name {
-    font-size: 1.125rem;
+    font-size: var(--big-font);
 }
 
 .web-app.left #contacts .last-message {
     color: var(--last-message);
-    font-size: .875rem;
+    font-size: var(--small-font);
 }
 
 .web-app.left #contacts .last-message.hour {
-    font-size: .75rem;
+    font-size: var(--smaller-font);
 }

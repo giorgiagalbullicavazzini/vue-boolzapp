@@ -33,6 +33,20 @@
 
 /*
 =============
+ Font sizes
+=============
+*/
+
+:root {
+    --bigger-font: 1.375rem;
+    --big-font: 1.125rem;
+    --micro-font: .625rem;
+    --small-font: .875rem;
+    --smaller-font: .75rem;
+}
+
+/*
+=============
  Sizes
 =============
 */

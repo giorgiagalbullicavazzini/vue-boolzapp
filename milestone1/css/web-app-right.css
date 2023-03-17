@@ -17,7 +17,7 @@
 
 .web-app.right header .last-login {
     color: var(--last-login);
-    font-size: .875rem;
+    font-size: var(--small-font);
 }
 
 /*
@@ -32,7 +32,7 @@
 }
 
 .web-app.right main .message .hour {
-    font-size: .625rem;
+    font-size: var(--micro-font);
 }
 
 /*
