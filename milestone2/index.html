@@ -125,7 +125,7 @@
 
             <!-- Main -->
             <main class="flex flex-column flex-grow overflow-y">
-                <div v-for="(contact_message, index) in contacts[0].messages" :class="(contact_message.status === 'sent') ? 'sent align-self-end' : 'received align-self-start'" class="message flex justify-between">
+                <div v-for="(contact_message, index) in contacts[selectedContact].messages" :class="(contact_message.status === 'sent') ? 'sent align-self-end' : 'received align-self-start'" class="message flex justify-between">
                     <div class="text">{{ contact_message.message }}</div>
                     <div class="hour align-self-end">{{ dateTransform(index) }} </div>
                 </div>
