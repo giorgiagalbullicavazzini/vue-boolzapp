@@ -64,15 +64,9 @@ ul {
 =============
 */
 
-.web-app.left #contacts li:first-child {
+.active {
     background-color: var(--active-chat);
 }
-
-/* Remove above, activate below */
-
-/* .active {
-    background-color: var(--active-chat);
-} */
 
 .align-center {
     align-items: center;
