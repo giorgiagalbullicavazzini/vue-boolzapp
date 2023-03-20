@@ -1,0 +1,60 @@
+/*
+=============
+ Common
+=============
+*/
+
+.web-app.right > header,
+.web-app.right > footer {
+    border-left: .125rem solid var(--main-border);
+}
+
+/*
+=============
+ Header
+=============
+*/
+
+.web-app.right header .last-login {
+    color: var(--last-login);
+    font-size: var(--small-font);
+}
+
+/*
+=============
+ Main
+=============
+*/
+
+.web-app.right main {
+    background-image: url(../img/mine.jpg);
+    padding: 2.8125rem 5.3125rem;
+}
+
+.web-app.right main .message .hour {
+    font-size: var(--micro-font);
+}
+
+/*
+=============
+ Footer
+=============
+*/
+
+.web-app.right footer {
+    background-color: var(--footer-background);
+    padding: .625rem 0;
+}
+
+.web-app.right footer #enter-message input {
+    border-radius: .3125rem;
+    font-size: var(--small-font);
+    padding: .9375rem;
+    width: 100%;
+}
+
+.web-app.right footer #emoticons,
+.web-app.right footer #vocal-message {
+    color: var(--options-footer);
+    margin: 1.875rem;
+}
