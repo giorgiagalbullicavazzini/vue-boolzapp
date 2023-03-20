@@ -85,7 +85,7 @@
                                     <div class="name">{{ filteredContacts[index].name }}</div>
                                     <div class="last-message">{{ filteredContacts[index].messages[filteredContacts[index].messages.length - 1].message }}</div>
                                 </div>
-                                <div class="last-message hour">12:00</div>
+                                <div class="last-message hour"> {{ lastDateTransform(filteredContacts[index].messages.length - 1, prevIndexArray[index]) }} </div>
                             </div>
                         </li>
                     </ul>
@@ -127,7 +127,7 @@
             <main class="flex flex-column flex-grow overflow-y">
                 <div v-for="(contact_message, index) in contacts[selectedContact].messages" :class="(contact_message.status === 'sent') ? 'sent align-self-end' : 'received align-self-start'" class="message flex justify-between">
                     <div class="text">{{ contact_message.message }}</div>
-                    <div class="hour align-self-end">{{ dateTransform(index) }} </div>
+                    <div class="hour align-self-end">{{ dateTransform(index) }}</div>
                 </div>
             </main>
             <!-- // Main -->

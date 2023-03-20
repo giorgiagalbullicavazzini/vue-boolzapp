@@ -192,6 +192,11 @@ const app = createApp({
             const dt = luxon.DateTime.fromFormat(this.contacts[this.selectedContact].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
             return dt;
         },
+        // Last message date transformation into human language
+        lastDateTransform(messageIndex, contactIndex) {
+            const dt = luxon.DateTime.fromFormat(this.contacts[contactIndex].messages[messageIndex].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
+            return dt;
+        },
         // Get custom formatted time
         getFormattedTime() {
             const now = luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
