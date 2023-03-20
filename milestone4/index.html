@@ -76,7 +76,7 @@
                 <!-- Contacts -->
                 <div id="contacts" class="flex-grow overflow-y">
                     <ul>
-                        <li v-for="(contact, index) in filteredContacts" @click="activeContact(index)" :class="{ active: index === selectedContact }">
+                        <li v-for="(contact, index) in filteredContacts" @click="activeContact(prevIndexArray[index])" :class="{ active: prevIndexArray[index] === selectedContact }">
                             <div class="contact flex justify-between">
                                 <div class="img big">
                                     <img :src="filteredContacts[index].avatar" :alt="`Foto profilo di ${filteredContacts[index].name}`" class="rounded">

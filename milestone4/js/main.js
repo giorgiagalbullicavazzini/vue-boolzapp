@@ -13,6 +13,8 @@ const app = createApp({
             replyTimer: 1,
             // Filtered contacts array
             filteredContacts: [],
+            // Previous index array
+            prevIndexArray: [],
             // Contacts array
             contacts: [
                 {
@@ -185,7 +187,7 @@ const app = createApp({
         activeContact(index) {
             this.selectedContact = index;
         },
-        // Message date transform into human language
+        // Message date transformation into human language
         dateTransform(index) {
             const dt = luxon.DateTime.fromFormat(this.contacts[this.selectedContact].messages[index].date, "dd/MM/yyyy HH:mm:ss").toLocaleString(luxon.DateTime.TIME_24_SIMPLE);
             return dt;
@@ -221,15 +223,24 @@ const app = createApp({
         },
         // Contact search
         contactSearch() {
-            this.filteredContacts = this.contacts.filter((contact) => {
+            this.prevIndexArray = [];
+            this.filteredContacts = this.contacts.filter((contact, index) => {
                 if(contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    this.prevIndex = index;
+                    this.prevIndexArray.push(this.prevIndex);
                     return true;
                 }
             })
-            console.log(this.filteredContacts);
         }
     },
     beforeMount() {
+        // Contacts array gets copied to create filteredContacts
         this.filteredContacts = this.contacts;
+
+        // prevIndexArray gets created
+        for (let i = 0; i < this.contacts.length; i++) {
+            const prevIndex = i;
+            this.prevIndexArray.push(prevIndex);
+        }
     }
 }).mount('#app');
