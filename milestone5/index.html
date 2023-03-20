@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="info flex-grow">
                                     <div class="name">{{ filteredContacts[index].name }}</div>
-                                    <div class="last-message">Ultimo messaggio inviato</div>
+                                    <div class="last-message">{{ filteredContacts[index].messages[filteredContacts[index].messages.length - 1].message }}</div>
                                 </div>
                                 <div class="last-message hour">12:00</div>
                             </div>
