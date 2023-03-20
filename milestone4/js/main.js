@@ -11,6 +11,8 @@ const app = createApp({
             selectedContact: 0,
             newMessage: '',
             replyTimer: 1,
+            // Filtered contacts array
+            filteredContacts: [],
             // Contacts array
             contacts: [
                 {
@@ -219,14 +221,15 @@ const app = createApp({
         },
         // Contact search
         contactSearch() {
-            const filteredContacts = this.contacts.filter((contact) => {
+            this.filteredContacts = this.contacts.filter((contact) => {
                 if(contact.name.toLowerCase().includes(this.search.toLowerCase())) {
                     return true;
                 }
             })
-            // console.log(filteredContacts);
-
-            return filteredContacts;
+            console.log(this.filteredContacts);
         }
+    },
+    beforeMount() {
+        this.filteredContacts = this.contacts;
     }
 }).mount('#app');

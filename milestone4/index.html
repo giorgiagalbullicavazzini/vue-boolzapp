@@ -76,13 +76,13 @@
                 <!-- Contacts -->
                 <div id="contacts" class="flex-grow overflow-y">
                     <ul>
-                        <li v-for="(contact, index) in contactSearch()" @click="activeContact(index)" :class="{ active: index === selectedContact }">
+                        <li v-for="(contact, index) in filteredContacts" @click="activeContact(index)" :class="{ active: index === selectedContact }">
                             <div class="contact flex justify-between">
                                 <div class="img big">
-                                    <img :src="contactSearch()[index].avatar" :alt="`Foto profilo di ${contactSearch()[index].name}`" class="rounded">
+                                    <img :src="filteredContacts[index].avatar" :alt="`Foto profilo di ${filteredContacts[index].name}`" class="rounded">
                                 </div>
                                 <div class="info flex-grow">
-                                    <div class="name">{{ contactSearch()[index].name }}</div>
+                                    <div class="name">{{ filteredContacts[index].name }}</div>
                                     <div class="last-message">Ultimo messaggio inviato</div>
                                 </div>
                                 <div class="last-message hour">12:00</div>
@@ -102,10 +102,10 @@
             <header class="flex justify-between">
                 <div id="selected-contact" class="flex align-center">
                     <div class="img small">
-                        <img :src="contactSearch()[selectedContact].avatar" :alt="`Foto profilo di ${contactSearch()[selectedContact].name}`" class="rounded">
+                        <img :src="contacts[selectedContact].avatar" :alt="`Foto profilo di ${contacts[selectedContact].name}`" class="rounded">
                     </div>
                     <div class="info">
-                        <div class="name">{{ contactSearch()[selectedContact].name }}</div>
+                        <div class="name">{{ contacts[selectedContact].name }}</div>
                         <div class="last-login">Ultimo accesso oggi alle 12:00</div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
 
             <!-- Main -->
             <main class="flex flex-column flex-grow overflow-y">
-                <div v-for="(contact_message, index) in contactSearch()[selectedContact].messages" :class="(contact_message.status === 'sent') ? 'sent align-self-end' : 'received align-self-start'" class="message flex justify-between">
+                <div v-for="(contact_message, index) in contacts[selectedContact].messages" :class="(contact_message.status === 'sent') ? 'sent align-self-end' : 'received align-self-start'" class="message flex justify-between">
                     <div class="text">{{ contact_message.message }}</div>
                     <div class="hour align-self-end">{{ dateTransform(index) }} </div>
                 </div>
